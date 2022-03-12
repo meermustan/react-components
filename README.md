@@ -94,7 +94,7 @@ And after successfully implementing the files import jQuery in component where y
 
 `import $ from 'jquery'`
 
-And futher add this in useEffect and change the className '.fs-demo' according to you want.
+And futher add this in useEffect and change the className `.fs-demo` according to you want.
 
 <pre>
   var $ = global.jQuery;
@@ -103,31 +103,31 @@ And futher add this in useEffect and change the className '.fs-demo' according t
 </pre>
 
 And add the className you define to the html component and don't forget to add attribute of `data-fl-scrolls` and it's looks like this.
-`<div  className=" table-outer fs-demo" data-fl-scrolls>
-         
-              <Table className='table'>
-                  <thead>
-                      <tr>
-                          <th>#</th>
+`
+<div  className=" table-outer fs-demo" data-fl-scrolls>
+        <Table className='table'>
+              <thead>
+                  <tr>
+                      <th>#</th>
+                      {Array.from({ length: 100 }).map((_, index) => (
+                          <th key={index}>Table heading</th>
+                      ))}
+                  </tr>
+              </thead>
+              <tbody>
+                  {Array.from({length:50}).map((_,index)=>(
+                      <tr key={index}>
+                          <td>{index}</td>
                           {Array.from({ length: 100 }).map((_, index) => (
-                              <th key={index}>Table heading</th>
+                              <td key={index}>Table cell {index}</td>
                           ))}
                       </tr>
-                  </thead>
-                  <tbody>
-                      {Array.from({length:50}).map((_,index)=>(
-                          <tr key={index}>
-                              <td>{index}</td>
-                              {Array.from({ length: 100 }).map((_, index) => (
-                                  <td key={index}>Table cell {index}</td>
-                              ))}
-                          </tr>
-                      ))}
+                  ))}
 
-                  </tbody>
-              </Table>
-        
-</div>`
+              </tbody>
+       </Table>
+</div>
+ `
 
 
 
