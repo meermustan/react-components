@@ -127,8 +127,4 @@ And add the className you define to the html component and don't forget to add a
               </tbody>
        </Table>
 </div>
- `
-
-
-
-
+`
