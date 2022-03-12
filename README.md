@@ -68,3 +68,67 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+## For Floating Component
+
+After creating an react app need to install jQuery
+`
+  npm install jquery --save
+`
+
+After that copy the css and js files of the public directory and copy it to your public folder fo react js.
+and add this in the ./public/index.html
+
+
+`<link rel="stylesheet" href="./css/main.css?v3.2.0"/>`
+<pre>
+  <script src="./js/jquery-3.6.0.slim.min.js"></script>
+  <script src="./js/jquery.floatingscroll.min.js?v3.2.0"></script>
+</pre>
+
+
+And after successfully implementing the files import jQuery in component where you are going to use floating component
+
+`import $ from 'jquery'`
+
+And futher add this in useEffect and change the className '.fs-demo' according to you want.
+
+<pre>
+  var $ = global.jQuery;
+  
+  $(".fs-demo").floatingScroll();
+</pre>
+
+And add the className you define to the html component and don't forget to add attribute of `data-fl-scrolls` and it's looks like this.
+`<div  className=" table-outer fs-demo" data-fl-scrolls>
+         
+              <Table className='table'>
+                  <thead>
+                      <tr>
+                          <th>#</th>
+                          {Array.from({ length: 100 }).map((_, index) => (
+                              <th key={index}>Table heading</th>
+                          ))}
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {Array.from({length:50}).map((_,index)=>(
+                          <tr key={index}>
+                              <td>{index}</td>
+                              {Array.from({ length: 100 }).map((_, index) => (
+                                  <td key={index}>Table cell {index}</td>
+                              ))}
+                          </tr>
+                      ))}
+
+                  </tbody>
+              </Table>
+        
+</div>`
+
+
+
+
