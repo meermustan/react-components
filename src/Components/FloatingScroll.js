@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import '../Style/FloatingScroll.css';
-import $ from 'jquery';
+// import $ from 'jquery';
 import { Table, } from 'react-bootstrap'
 
 const FloatingScroll = () => {
-
+    
     useEffect(() => {
-
+        
         var $ = global.jQuery;
         $(".fs-demo").floatingScroll();
         
