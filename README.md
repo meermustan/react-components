@@ -103,7 +103,7 @@ And futher add this in useEffect and change the className `.fs-demo` according t
 </pre>
 
 And add the className you define to the html component and don't forget to add attribute of `data-fl-scrolls` and it's looks like this.
-`
+```
 <div  className=" table-outer fs-demo" data-fl-scrolls>
         <Table className='table'>
               <thead>
@@ -127,4 +127,4 @@ And add the className you define to the html component and don't forget to add a
               </tbody>
        </Table>
 </div>
-`
+```
